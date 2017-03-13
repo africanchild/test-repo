@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h3 id="output"></h3>
+  </body>
+  <script>
+    var output = document.getElementById("output");
+    function greet(firstName, lastName) {
+      // if (firstName == '' typeof(lastname) != String) {
+      //   alert("parameter 1 is required");
+      // } else if (firstName == '' typeof(lastName) != String) {
+      //   alert("parameter 2 is required");
+      // }
+      output.innerHTML = ' Good Morning ' +  firstName + '' + lastName;
+    }
+    greet('Igbinedion', 'Daniel');
+  </script>
+</html>

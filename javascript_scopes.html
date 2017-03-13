@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Scopes | Javascript</title>
+  </head>
+  <body>
+    <h3 id="output"></h3>
+  </body>
+  <script>
+    var name = 'Eric Cantona';
+
+    function showname() {
+
+      console.log(name);
+    }
+    name = 'Daniel Doe';
+    document.getElementById('output').innerHTML = name;
+    showname
+    // console.log(showname());
+  </script>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simple Arithmetics</title>
+  </head>
+  <style media="screen">
+    body {
+      margin: 20px;
+    }
+  </style>
+  <body>
+    <form>
+      <input type="numbers" id="first_number">
+      <select id="opList" onchange="setValue()">
+        <option value="addition">+</option>
+        <option value="minus">-</option>
+        <option value="multiply">*</option>
+        <option value="divide">/</option>
+      </select>
+      <input type="numbers" id="second_number">
+      <button type="calculate" id="button" value="Calculate" onClick="handleClick()">Answer</button>
+      <input type="text" id="result" placeholder="answer" readonly onfocus="this.blur()">
+    </form>
+  </body>
+
+  <P>
+  <script>
+
+    var first_number;
+    var second_number;
+    var setValue;
+
+    function handleClick() {
+      first_number=parseInt(document.getElementById("first_number").value);
+      second_number=parseInt(document.getElementById("second_number").value);
+      var result;
+
+      if(setValue == "addition") {
+        result = parseInt(first_number + second_number);
+      } else if(setValue == "minus") {
+        result = parseInt(first_number - second_number);
+      } else if(setValue == "multiply") {
+        result = parseInt(first_number * second_number);
+      } else if(setValue == "divide") {
+        result = parseInt(first_number / second_number);
+      }
+
+      var select=document.getElementById("select");
+      select.value=select;
+
+      var btn=document.getElementById("button");
+      output.value=result;
+    }
+
+    function setValue() {
+      setValue=document.getElementById("opList").value;
+    }
+
+    function init() {
+      var button=document.getElementById("result");
+      button.onClick=handleClick;
+    }
+
+    window.onload = init;
+  </script>
+</html>

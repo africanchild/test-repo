@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Animation | Exercise</title>
+    <link rel="stylesheet" href="css/anikes.css">
+  </head>
+  <body>
+    <div class="animate" id="classy">
+      <h3 class="xoxo">DANIEL</h3>
+    </div>
+    <button id="pause">Stop</button>
+    <button id="start" name="button">Start</button>
+  </body>
+  <script>
+    var pauseBtn = document.getElementById("pause");
+    var animatedItems = document.getElementById("animate");
+    var animate = document.getElementById("animate");
+
+      pauseBtn.addEventListener('click', function() {
+        animate.style.animation = 'none';
+      })
+  </script>
+</html>

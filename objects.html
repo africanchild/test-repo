@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Object</title>
+  </head>
+  <body>
+    <h3 id="output"></h3>
+    <script>
+      var myCar = {
+        type: 'salon',
+        manufacturer: 'Toyota',
+        make: 'Camry',
+        year: 2016,
+        getType: function(){
+          return this.type;
+        },
+      };
+      console.log(myCar.getType());
+      // var user = {
+      //
+      // }
+      var person = {
+        fullname: 'Igbinedion Daniel',
+        age: 18,
+        eyecolour: 'brown',
+      }
+      data: function() {
+        return ' Name:' + this.fullname() + '<br> Age:'+ this.age + '<br> Eyecolour: '+ this.eyecolour
+      }
+      document.getElementById('output').innerHTML = person.data
+    </script>
+  </body>
+</html>

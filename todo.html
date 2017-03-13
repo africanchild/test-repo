@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TODO Exercise | Javascript</title>
+  </head>
+  <style media="screen">
+    body {
+      text-align: center;
+    }
+    #addItem {
+      color: white;
+      background: black;
+    }
+    #addItem:hover {
+      background: grey;
+    }
+    #listItem:hover {
+      background: grey;
+    }
+  </style>
+  <body>
+      <h3>Todo List Javascript</h3>
+    <div>
+      <h3 id="errors"></h3>
+        <input type="text" id="listItem">
+        <button id="addItem" name="button">Add Item</button>
+    </div>
+    <ul id="listItems"></ul>
+  </body>
+ <script>
+   var listitem = document.getElementById("listItem");
+   var btn = document.getElementById("addItem");
+   var list = document.getElementById("listItems");
+   btn.addEventListener("click", function () {
+     if (listItem.value == '') {
+       document.getElementById('errors').innerHTML = "<h3>Sorry no text detected!</h3>";
+       return;
+     }
+     list.innerHTML += "<li>" + listItem.value + "</li>";
+     document.getElementById('errors').innerHTML = '';
+   });
+ </script>
+</html>

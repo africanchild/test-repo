@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+  <script>
+    // if (typeOf( localStorage())== 'undefined')) {
+    //   // Client does not support localStorage
+    //   console.log("Does not support this.....");
+    // } else {
+    //   console.log("Yeah, it supports this..")
+    // }
+
+    localStorage.setItem("time", new Date());
+
+    // retrieve an item
+    console.log(localStorage.getItem("time"));
+
+    // remove an item
+    localStorage.removeItem("time");
+
+    console.log(localStorage.time);
+
+    sessionStorage.setItem("exp", 12);
+    console.log(sessionStorage.getItem("exp"))
+  </script>
+</html>

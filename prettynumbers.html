@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pretty JS Numbers</title>
+  </head>
+  <body>
+
+  </body>
+  <script>
+    function prettyNum(n) {
+      var k  = Math.pow(10, 3);
+      var mil = Math.pow(10, 6);
+      var bil = Math.pow(10, 9);
+
+      if (n >= mil) {
+        return (n / mil) + 'M';
+
+      } else if (n >= bil) {
+        return (n / bil) + 'B';
+
+      } else if (n >= k) {
+        return (n / k) + 'K';
+
+      } else {
+        return n;
+      }
+    }
+
+    document.write(prettyNum(1000000))
+  </script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Reverse Mode</title>
+  </head>
+  <body>
+    <h2 id="output"></h2>
+    <input type="text" id="reverse">
+    <button type="button" id="mode">Reverse</button>
+  </body>
+  <script>
+    var reverse = document.getElementById('reverse');
+    var btn = document.getElementById('mode');
+
+    btn.addEventListener('click', function() {
+      if (reverse.value == '') {
+        document.getElementById('output').innerHTML = "<h3>No Text</h3>";
+        return;
+      }
+
+    });
+  </script>
+</html>

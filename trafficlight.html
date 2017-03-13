@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Traffic Light</title>
+  </head>
+  <style media="screen">
+    #red_light {
+      background: red;
+      text-align: center;
+      font-size: 5pt;
+      color: #fff;
+      width: 50px;
+      height: 60px;
+    }
+    #yellow_light {
+      background: yellow;
+      text-align: center;
+      font-size: 5pt;
+      color: #fff;
+      width: 50px;
+      height: 60px;
+    }
+    #green_light {
+      background: green;
+      text-align: center;
+      font-size: 5pt;
+      color: #fff;
+      width: 50px;
+      height: 60px;
+
+    }
+  </style>
+  <body>
+      <div id="timer"></div>
+      <div id="red_light">RED</div>
+      <div id="yellow_light">YELLOW</div>
+      <div id="green_light">GREEN</div>
+  </body>
+  <script>
+
+  var total_seconds = 60 * 2.25;
+  var minutes = parseInt(total_seconds / 60);
+  var seconds = parseInt(total_seconds % 60);
+  var timer = document.getElementById('timer');
+  var red = document.getElementById('red_light');
+  var yellow = document.getElementById('yellow_light');
+  var green = document.getElementById('green_light')
+  function countDown() {
+    // Add leading zeros eg 09 seconds 09 minutes
+    if (minutes < 10) {
+      minutes = "0" + minutes;
+    }
+    if (seconds < 10) {
+      seconds = "0" + seconds;
+    }
+    if (total_seconds <= 135) {
+      red_light.style.display = 'block';
+      yellow_light.style.display = 'none';
+      green_light.style.display = 'none';
+    }
+    if (total_seconds <= 75) {
+      yellow_light.style.display = 'block';
+      red_light.style.display = 'none';
+      green_light.style.display = 'none';
+    }
+    if (total_seconds <= 60) {
+      green_light.style.display = 'block';
+      yellow_light.style.display = 'none';
+      red_light.style.display = 'none';
+    }
+    // else (total_seconds <= 0) {
+    //   green_light.style.display = 'none';
+    //   yellow_light.style.display = 'none';
+    //   red_light.style.display = 'none';
+    // }
+    // display in HTML
+    timer.innerHTML = " Time left: "+ minutes + " minutes " + seconds + " seconds ";
+
+    if (total_seconds <= 60) {
+      timer.innerHTML = "<h1> Move your Lazy Asses!!!!";
+    } else {
+      total_seconds = total_seconds -1;
+      minutes = parseInt(total_seconds / 60);
+      seconds = parseInt(total_seconds % 60);
+      // localStorage.setItem()
+      setTimeout("countDown()", 1000);
+    }
+    // total_seconds = total_seconds -1;
+    // minutes = parseInt(total_seconds / 60);
+    // seconds = parseInt(total_seconds % 60);
+    // setTimeout("countDown()", 1000);
+  }
+  setTimeout(countDown, 1000);
+  </script>
+</html>

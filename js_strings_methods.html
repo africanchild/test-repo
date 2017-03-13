@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript String Methods</title>
+  </head>
+  <body>
+
+  </body>
+  <script>
+    var strings = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var arr = ['1', 2, 3, 'four'];
+    console.log(strings.length)
+    console.log(arr.length)
+
+    var str = "The quick brown fox jumps over the lazy dog";
+    var players = "Daniel, Igbinedion,";
+    console.log(players);
+
+    // after 200 mins
+
+    var replace = ("fox", "bird");
+    console.log(replace);
+
+
+    console.log(str.indexOf('fox'));
+    console.log(str.search('the'));
+    console.log(str.slice(0, 30));
+    console.log(str.substr(10, 5));
+
+    var name1 = "Daniel";
+    var name2 = "David";
+    var name3 = "John"
+    console.log(name1.concat(" ", name2, " ", name3));
+
+    var persons = ['Daniel', 'David', 'Gabriel', 'Jemimah'];
+    console.log(persons);
+    console.log(persons.pop());
+    persons.push('Uyiosa');
+
+    var text = ['a', 'b', 'c', 'd',];
+    console.log(text.reverse());
+
+    var gscope = "Hello";
+
+    // function lscope() {
+      var lscope = "World";
+      console.log(gscope + '' lscope);
+    }
+  </script>
+</html>

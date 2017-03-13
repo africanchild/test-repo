@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mini Calculator</title>
+  </head>
+  <style media="screen">
+    body {
+      text-align: center;
+    }
+    .first {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .second {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .third {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .fourth {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+  <body>
+      <h3>Calculator</h3>
+    <div>
+      <h3 id="errors"></h3>
+      <input type="Maths" id="numbers">
+      <div class="first">
+        <button id="a" name="button">1</button>
+        <button id="b" name="button">2</button>
+        <button id="c" name="button">3</button>
+      </div>
+      <div class="second">
+        <button id="d" name="button">4</button>
+        <button id="e" name="button">5</button>
+        <button id="f" name="button">6</button>
+      </div>
+      <div class="third">
+        <button id="g" name="button">7</button>
+        <button id="h" name="button">8</button>
+        <button id="i" name="button">9</button>
+      </div>
+      <div class="fourth">
+        <button id="j" name="button">0</button>
+      </div>
+      <div class="signs">
+        <button id="add" name="button">+</button>
+        <button id="subtract" name="button">-</button>
+        <button id="multiply" name="button">*</button>
+        <button id="division" name="button">/</button>
+        <button id="handleClick" name="button">=</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    var numbers = document.getElementById("numbers");
+    var btn1 = document.getElementById("a");
+    var btn2 = document.getElementById("b");
+    var btn3 = document.getElementById("c");
+    var btn4 = document.getElementById("d");
+    var btn5 = document.getElementById("e");
+    var btn6 = document.getElementById("f");
+    var btn7 = document.getElementById("g");
+    var btn8 = document.getElementById("h");
+    var btn9 = document.getElementById("i");
+    var btn0 = document.getElementById("j");
+
+    var first_number;
+    var second_number;
+    var select_value;
+
+    var btnadd = document.getElementById('add');
+    var btnminus = document.getElementById('subtract');
+    var btnxx = document.getElementById('multiply');
+    var btndivide = document.getElementById('division');
+    var result = document.getElementById('handleClick');
+
+
+    btn1.addEventListener("click", function () {
+      numbers.value += btn1.innerHTML;
+      console.log(btn1.innerHTML);
+    });
+    btn2.addEventListener("click", function () {
+      numbers.value += btn2.innerHTML;
+      console.log(btn2.innerHTML);
+    });
+    btn3.addEventListener("click", function () {
+      numbers.value += btn3.innerHTML;
+      console.log(btn3.innerHTML);
+    });
+    btn4.addEventListener("click", function () {
+      numbers.value += btn4.innerHTML;
+      console.log(btn4.innerHTML);
+    });
+    btn5.addEventListener("click", function () {
+      numbers.value += btn5.innerHTML;
+      console.log(btn5.innerHTML);
+    });
+    btn6.addEventListener("click", function () {
+      numbers.value += btn6.innerHTML;
+      console.log(btn6.innerHTML);
+    });
+    btn7.addEventListener("click", function () {
+      numbers.value += btn7.innerHTML;
+      console.log(btn7.innerHTML);
+    });
+    btn8.addEventListener("click", function () {
+      numbers.value += btn8.innerHTML;
+      console.log(btn8.innerHTML);
+    });
+    btn9.addEventListener("click", function () {
+      numbers.value += btn9.innerHTML;
+      console.log(btn9.innerHTML);
+    });
+    btn0.addEventListener("click", function () {
+      numbers.value += btn0.innerHTML;
+      console.log(btn0.innerHTML);
+    });
+    btnadd.addEventListener("click", function () {
+      numbers.value += btnadd.innerHTML;
+      console.log(btnadd.innerHTML);
+    });
+    btnminus.addEventListener("click", function () {
+      numbers.value += btnminus.innerHTML;
+      console.log(btnminus.innerHTML);
+    });
+    btnxx.addEventListener("click", function () {
+      numbers.value += btnxx.innerHTML;
+      console.log(btnxx.innerHTML);
+    });
+    btndivide.addEventListener("click", function () {
+      numbers.value += btndivide.innerHTML;
+      console.log(btndivide.innerHTML);
+    });
+    function handleClick () {
+      if (true) {
+
+      }=parseInt(document.getElementById('a').value);
+
+    }
+  </script>
+
+</html>
